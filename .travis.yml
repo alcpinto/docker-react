@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t alcpinto/docker-react -f Dockerfile.dev .
+
+# -- --coverage indicates the test to return instead of waiting for an input
+script:
+  - docker run alcpinto/docker-react npm run test -- --coverage
