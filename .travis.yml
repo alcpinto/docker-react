@@ -8,3 +8,4 @@ before_install:
 # -- --coverage indicates the test to return instead of waiting for an input
 script:
   - docker run alcpinto/docker-react npm run test -- --coverage
+
