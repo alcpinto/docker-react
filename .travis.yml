@@ -5,6 +5,7 @@ services:
 before_install:
   - docker build -t alcpinto/docker-react -f Dockerfile.dev .
 
+
 script:
   - docker run alcpinto/docker-react npm run test -- --coverage
   - docker stop alcpinto/docker-react
