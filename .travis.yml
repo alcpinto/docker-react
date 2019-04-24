@@ -7,7 +7,6 @@ before_install:
 
 
 script:
-  - docker run alcpinto/docker-react npm run test -- --coverage
-  - docker stop alcpinto/docker-react
+  - docker run alcpinto/docker-react npm run test-coverage
 
 
