@@ -15,6 +15,7 @@ RUN npm run build
 # Each phase is separated by FROM
 #
 FROM nginx
+EXPOSE 80
 # /usr/share/nginx/html (required by nginx)
 COPY --from=builder /usr/app/build /usr/share/nginx/html
 # default command from nginx is enough for start the aplication
